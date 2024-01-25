@@ -17,7 +17,7 @@ const Drawer = createDrawerNavigator();
 const App = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator initialRouteName="Add Tasks">
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Add Tasks" component={Task} />
       </Drawer.Navigator>

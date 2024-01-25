@@ -5,6 +5,9 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "icons": {
+      "fontFamily": "MaterialIcons"
+    },
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -15,7 +18,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "Yes"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +29,11 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ecaa5213-8ba7-4482-8837-bcfbaa768cfc"
+      }
     }
   }
 }
