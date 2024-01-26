@@ -57,12 +57,13 @@ const TaskForm = ({ onAddTask }) => {
         
         style={styles.input}
       />
-
+      <View style={{display:'flex' , flexDirection:'row'}}>
       <TextInput placeholder="Disabled TextInput"
-        editable={false} onPressIn={showStartTimePicker} style={styles.button} value={startTime} label='Start Time'/>
+        editable={false} onPressIn={showStartTimePicker} style={styles.textInput} value={startTime} label='Start Time'/>
       <TextInput placeholder="Disabled TextInput"
-        editable={false} onPressIn={showEndTimePicker} style={styles.button} value={endTime} label='End Time'/>
-      <Button mode="contained" onPress={handleAddTask} style={styles.button}>
+        editable={false} onPressIn={showEndTimePicker} style={styles.textInput} value={endTime} label='End Time'/>
+      </View>
+      <Button mode="contained" onPress={handleAddTask} style={styles.button} >
         Add Task
       </Button>
       <DateTimePickerModal
@@ -86,14 +87,26 @@ const TaskForm = ({ onAddTask }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 16,
+    borderWidth: 1, // Border width
+    borderColor: '#000', // Border color
+    borderRadius: 8,
   },
   input: {
     marginBottom: 16,
   },
-  button: {
+  textInput: {
     marginTop: 8,
-    marginBottom:8
+    margin:8,
+    marginBottom: 16,
+    flex:1,
+    // width:'45%'
   },
+  button:{
+    height:'20%',
+    display:'flex',
+    justifyContent:'center',
+    
+  }
 });
 
 export default TaskForm;
